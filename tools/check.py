@@ -1,16 +1,11 @@
 import json
 from collections import Counter
-import math
-import numpy as np
-
 
 json_file_train = '../FS2K/anno_train.json'
 json_file_test = '../FS2K/anno_test.json'
 
-
-with open(json_file_train, 'r') as f:
+with open(json_file_test, 'r') as f:
     json_data = json.loads(f.read())
-
 attrs = {}   # 里面存放所有属性的值
 for attr in json_data[0].keys():
     attrs[attr] = []
